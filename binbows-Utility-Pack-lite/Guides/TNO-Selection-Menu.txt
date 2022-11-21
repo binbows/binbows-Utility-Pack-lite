@@ -1,0 +1,7 @@
+Its been a while since I modded it for gorky but the TLDR is
+- find the two bookmark files that have all the tags for the opening screen written down
+- locate the spot you want the flag/flags to be in there and replace the ZZZ tag with your own
+- find the file in the gfx/interface folder that looks like a half ruined background and cut out the parts your flag would be below, also find the transparent overlay that the .gui uses to prevent you from clicking on that spot in vanilla and edit it as well
+- you should get the flag to appear and be clickable, then follow the format other countries have in the bookmark files to add natspirits, focuses etc.
+
+Qouted from thanosaekk#7862, in TNO Sub-Modding Coop, in #guides-and-resources.

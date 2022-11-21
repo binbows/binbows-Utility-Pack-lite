@@ -1,0 +1,94 @@
+TNO Opening Screen Guide by binbows.
+Find me at, binbows#9857.
+
+  ______     ______     ______     ______     __         ______     ______   ______    
+ /\  __ \   /\  == \   /\  ___\   /\  __ \   /\ \       /\  ___\   /\__  _\ /\  ___\   
+ \ \ \/\ \  \ \  __<   \ \___  \  \ \ \/\ \  \ \ \____  \ \  __\   \/_/\ \/ \ \  __\   
+  \ \_____\  \ \_____\  \/\_____\  \ \_____\  \ \_____\  \ \_____\    \ \_\  \ \_____\ 
+   \/_____/   \/_____/   \/_____/   \/_____/   \/_____/   \/_____/     \/_/   \/_____/ 	
+
+	DO NOT USE!!!!!!
+	THIS IS NOT COMPATIBLE WITH THE NEW TNO OPENING SCREEN INTRODUCED WITH TNO:UB.
+	HOW EVER THE STEPS ARE STILL SIMILAR, THOUGH REQUIRING CHANGED TO ON_ACTIONS. SPECIFICALLY THE COUNTRY SET-UP ON_ACTIONS
+
+#################LOCALISTAION#################
+
+
+1.) Let's start with the basics, the Localistion.
+First create a scripted_localization folder in your common folder.
+
+2.) Grab the scripted localization file, named TNO_opening_Screen_scripted_loc.txt, from the main TNO mod.
+Usually found in: X:\Steam\steamapps\workshop\content\394360\2438003901\common\scripted_localisation or where ever you have TNO installed.
+Also, remember to copy over to your mod folder, otherwise your overwriting main TNO files. ALWAYS EDIT COPIED FILES OR YOUR OWN! PROBLEMS WILL HAPPEN IF YOU EDIT BASE TNO!
+
+Note; Making your own scripted localization file might work, however i'd recommend sticking with the main one.
+Though it does make updating slightly more annoying if the TNO devs add new opening screens, since you're not working off of your own one.
+
+3.) Now opening the file might be a bit overwhelming at first, but it's going to make sense soon enough.
+At the top of the file you will see the defined_text with the name of "GET_CLOSEBUTTON_TEXT" with the localization strings beneath it.
+This is where you will be storing your localization strings. 
+
+4.) Copy one of the text containers and replace the tag with your own. The position of the text container does not matter unless it is outside of the defined_text container, Always keep it inside!
+Now to get the text displaying, replace the localization key with your own.
+
+Example :
+
+text = {
+	trigger = { tag = SWE }
+	localization_key = TNO_OPENING_SCREEN_BUTTON_TEXT_SWE
+}
+
+5.) Create the localization file where you will store your text strings.
+This should be very simple. Just copy the localization key you've created into the .yml file and do localization normally.
+(Note; Make sure that the .yml file is valid for HOI4, otherwise it won't work.)
+
+Example : 
+
+TNO_OPENING_SCREEN_BUTTON_TEXT_SWE:0 "Framåt!"
+
+
+
+6.) Now for the actual localization, the main text.
+Similar as before. Though lower down in the scripted_localization file. 
+Look for the defined_text called GET_COUNTRY_INFO
+
+7.) Pick a simple one and copy it. (Not Komi, US or Germany, these have multi page text screens.)
+Change the TAG and localization key. Done.
+
+Example : 
+	text = {
+		trigger = { tag = SWE }
+		localization_key = COUNTRY_INFO_SWEDEN
+	}
+
+8.) Now you've done the localization part! Great for you, however this does not cover multi page localization screens. i dunno how to do that tbh.
+
+
+
+#################OPENING SCREEN ART#################
+
+1.) Incredibly similar as before, however we're dealing with GFX files now instead of localization files.
+
+2.) Keep the scripted localization file open.
+Look for the defined_text named "GET_POSTER".
+Copy a text container. Change Tag and Localization Key. Remember, Keep the Text Container within the defined_text!
+
+Example :
+	text = {
+		trigger = { tag = SWE }
+		localization_key = "GFX_TNO_OpeningScreen_Poster_Sweden"
+	}
+
+3.) Now, take your localization key put it in a .gfx file, format it normally, add your poster file.
+
+Example : 
+
+	spriteType = {
+		name = "GFX_TNO_OpeningScreen_Poster_Sweden"
+		textureFile = "gfx/interface/opening_screen/TNO_OpeningScreen_Poster_Sweden.dds"
+	}
+
+4.) Profit! You've done it. Now you have your own opening screen. 
+
+
+

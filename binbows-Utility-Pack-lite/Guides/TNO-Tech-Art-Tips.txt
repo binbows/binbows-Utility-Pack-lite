@@ -1,0 +1,6 @@
+you use blue for the outline and main body
+white for details
+red for moving parts (magazine, trigger, all that jazz)
+
+Qouted from Dispenser#0516, in the TNO discord, in #party-approved-media
+
